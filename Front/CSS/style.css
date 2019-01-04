@@ -301,7 +301,10 @@ body{
     width: fit-content;
     margin-bottom: 4px;
 }
-
+ .click a{
+    text-decoration: none;
+    color: #000000;
+ }
 .click .myface{
 	padding-left: 15px;
     padding-right: 15px;
@@ -311,7 +314,10 @@ body{
 	display: none;
 }
 
-.click2 p{
+.click2 a{
+    text-decoration: none;
+    color: #000000;
+    margin-top: 25px;
 	font-size: 25px;
 }
 
