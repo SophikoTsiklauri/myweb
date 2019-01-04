@@ -1,0 +1,132 @@
+@media (max-width: 1000px){
+.date{
+    top: 80%;
+    font-size: 35px;
+}
+
+#collectorcars{
+	width: 84%;
+}
+
+.collectorcars_ div {
+	font-size: 35px;
+}
+
+.collectorcars_ div img {
+	height: 90px;
+}
+#road{
+	height: 270px;
+}
+
+.getintouch{
+	padding-top: 20px;
+	background-color: #EBE8DE;
+	display: block;
+    width: 100%;
+}
+
+.click2{
+	display: block;
+}
+
+.contactinf{
+	display: none;
+}
+
+.contactform{
+	top: 20%;
+}
+
+#Contact {
+    height: 680px;}
+}
+
+@media (max-width: 800px){
+.date{
+    top: 75%;
+    font-size: 30px;
+}
+
+.Menu{
+    margin-top: 15%;
+}
+   
+#myDropdown a {
+    font-size: 40px;
+    padding: 15px;
+}
+
+.collectorcars_ div {
+	width: 400px;
+	margin: auto;
+	margin-bottom: 60px;
+}
+
+#road{
+	height: 200px;
+}
+    
+}
+
+@media (max-width: 600px){
+.date{
+    top: 70%;
+    font-size: 25px;
+}
+
+.Menu{
+   	margin-top: 20%;
+}
+
+#myDropdown a {
+    font-size: 30px;
+    padding: 5px;
+}
+
+#road{
+	height: 148px;
+}
+
+.form_1 input{
+    width: 97%;
+}
+
+.form_1 textarea{
+    width: 97%;
+}
+
+.contactform{
+    width: 82%;
+    height: 750px;
+}
+
+.form_1{
+    width: 81%;
+}
+
+.form_2{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.form_3 {
+    margin-top: 13px;
+    width: 93%;
+}
+
+#myfooter {
+    margin-top: 300px;
+    width: 82%;
+}
+
+.getintouch{
+    height: 730px;
+}
+
+}
+@media (max-width: 500px){
+#road{
+	height: 110px;
+}
+}
