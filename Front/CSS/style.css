@@ -258,7 +258,7 @@ body{
 }
 
 #map{
-    height: 700px;
+    height: 85%;
 	width: 90%;
 	position: absolute;
 }

@@ -36,10 +36,11 @@
 
 .contactform{
 	top: 20%;
+    height: 460px;
 }
 
 #Contact {
-    height: 680px;}
+    height: 690px;}
 }
 
 @media (max-width: 800px){
@@ -116,12 +117,12 @@
 }
 
 #myfooter {
-    margin-top: 300px;
+    margin-top: 330px;
     width: 82%;
 }
 
 .getintouch{
-    height: 730px;
+    height: 790px;
 }
 
 }
