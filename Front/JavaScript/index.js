@@ -10,11 +10,10 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
   var slides = document.getElementsByClassName("MySlides");
   if (n > slides.length) {slideIndex = 1}    
   if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  for (var i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";  
   }
   slides[slideIndex-1].style.display = "block";  
@@ -29,22 +28,6 @@ $("#myMenu,#myClose,#myDropdown a").click(function(){
 
 
 var TextFields = document.querySelectorAll(".TextFields");
-
-function CheckTextFields(){
-  for(var i = 0; i < TextFields.length; i++)
-  {
-    var Input = TextFields[i].querySelector(".inp");
-    if(Input.value == " " || Input.value =="")
-    {
-        Input.style.marginBottom = "0px";
-        var ErrorMess = TextFields[i].querySelector(".error");
-        ErrorMess.style.marginTop = "0px";
-        ErrorMess.style.marginBottom = "11px";
-        ErrorMess.style.display = "block";
-    }
-  }
-}
-
 var Dictionary = []
 
 for(var i = 0; i < TextFields.length; i++)
@@ -56,27 +39,45 @@ for(var i = 0; i < TextFields.length; i++)
       ErrorMessValue : ErrorMess,
     });
 }
-
-
-for(var i = 0; i < Dictionary.length; i++)
-{
-  Dictionary[i].KeyInput.addEventListener("click",function(){
+var count1=0;
+function CheckTextFields(){
+  for(var i = 0; i < TextFields.length; i++)
+  {
+    var Input = TextFields[i].querySelector(".inp");
+    if(Input.value == " " || Input.value =="")
+    {
+        Input.style.marginBottom = "0px";
+        var ErrorMess = TextFields[i].querySelector(".error");
+        ErrorMess.style.marginTop = "0px";
+        ErrorMess.style.marginBottom = "11px";
+        ErrorMess.style.display = "block";
+        count1++;
+    }
+    Dictionary[i].KeyInput.addEventListener("click",function(){
     for(var j = 0; j < Dictionary.length; j++)
     {
       if(this == Dictionary[j].KeyInput)
       {
         Dictionary[j].ErrorMessValue.style.display = "none";
         Dictionary[j].KeyInput.style.marginBottom = "25px";
+        count1--;
       }
     }
   })
+  }
+  if (count1>0)return false;
+  else return true;
 }
 
 
 
+
+
+
+var form3=document.querySelector(".form_3");
 var RadioButtons = document.querySelectorAll(".radio");
 var RadioError = document.querySelector("#radio_error");
-
+var count=0;
 function CheckRadioFields()
 {
     for(var i = 0; i < RadioButtons.length; i++)
@@ -85,28 +86,36 @@ function CheckRadioFields()
       {
         RadioError.style.display="none";
         RadioError.style.marginTop="0px;"
-        break;df
+        return true;
       }
-      else if(RadioButtons[i].checked == false)
+      else 
       {
         RadioError.style.display="block";
-        RadioError.style.marginTop="0px;"
+        form3.style.marginTop="40px";
+        count++;
       }
     }
-}
-
-for(var i = 0; i < RadioButtons.length; i++)
-{
-  RadioButtons[i].addEventListener("click",function(){
+    for(var i = 0; i < RadioButtons.length; i++)
+    {
+    RadioButtons[i].addEventListener("click",function(){
     RadioError.style.display = "none";
-  })
+    form3.style.marginTop="55px";
+    count--;
+    })
+}
+  if(count==RadioButtons.length)return false;
 }
 
 
+var thank=document.querySelector(".thank");
 
 $("#SentButton").click(function(){
-  CheckTextFields();
-  CheckRadioFields();
+  
+  if (CheckTextFields()==true&&CheckRadioFields()==true) thank.style.display="inline-block";
+  else{
+    CheckTextFields();
+    CheckRadioFields();
+  }
 });
 
 
