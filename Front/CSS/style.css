@@ -1,7 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
-    font-family: myriad-pro, sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -30,7 +30,7 @@ body{
 #myDropdown a {
 	text-decoration: none;
     color: #000000;
-    font-size: 45px;
+    font-size: 50px;
     padding: 20px;
     display: block;
 }
@@ -355,6 +355,7 @@ body{
 	width: 100%;
 }
 .thank{
+    font-family: 'Roboto', sans-serif;
     margin-left: 30px;
     display: none;
     font-size: 11px;
@@ -384,6 +385,7 @@ body{
 }
 
 .form_1 input{
+    font-family: 'Roboto Condensed', sans-serif;
 	padding-left: 14px;
 	border: none;
 	margin-bottom: 25px;
@@ -393,6 +395,7 @@ body{
 }
 
 .form_1 textarea{
+    font-family: 'Roboto Condensed', sans-serif;
 	padding-left: 14px;
 	padding-top: 10px;
 	border: none;
@@ -439,11 +442,13 @@ body{
 }
 
 #myfooter span{
+    font-family: 'Roboto', sans-serif;
 	background-color: #EDCCE8;
 	width: fit-content;
 }
 
 .error{
+    font-family: 'Roboto', sans-serif;
     display: none;
 	margin: 0;
 	color: #FF0000;
