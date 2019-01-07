@@ -3,8 +3,12 @@
     top: 80%;
     font-size: 35px;
 }
+#myDropdown a {
+    font-size: 45px;
+    padding-bottom: 15px;
+}
 
-#collectorcars{
+.collectorcars_{
 	width: 84%;
 }
 
@@ -48,14 +52,10 @@
     top: 75%;
     font-size: 30px;
 }
-
-.Menu{
-    margin-top: 15%;
-}
    
 #myDropdown a {
-    font-size: 40px;
-    padding: 15px;
+    font-size: 35px;
+    padding-bottom: 10px;
 }
 
 .collectorcars_ div {
@@ -76,13 +76,9 @@
     font-size: 25px;
 }
 
-.Menu{
-   	margin-top: 20%;
-}
-
 #myDropdown a {
-    font-size: 30px;
-    padding: 5px;
+    font-size: 25px;
+    padding-bottom: 5px;
 }
 
 #road{
@@ -112,7 +108,7 @@
 }
 
 .form_3 {
-    margin-top: 13px;
+    margin-top: 13px!important;
     width: 93%;
 }
 
