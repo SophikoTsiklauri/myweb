@@ -65,10 +65,25 @@ function CheckTextFields(){
     }
   })
   }
-  if (count1>0)return false;
+  if (count1>0)
+    {
+      return false;
+    }
   else return true;
 }
 
+
+function ClearInputs(Logic)
+{
+  if(Logic == true)
+  {
+    for(var i = 0; i < TextFields.length; i++)
+    {
+      var Input = TextFields[i].querySelector(".inp");
+      input.value = " ";
+    }
+  }
+}
 
 
 
@@ -105,13 +120,32 @@ function CheckRadioFields()
 }
   if(count==RadioButtons.length)return false;
 }
+function ClearInputs(Logic)
+{
+  if(Logic == true)
+  {
+    for(var i = 0; i < TextFields.length; i++)
+    {
+      var Input = TextFields[i].querySelector(".inp");
+      Input.value = "";
+    }
+  }
+  for(var i = 0; i < RadioButtons.length; i++){
+    RadioButtons[i].checked = false;
+  }
 
+}
 
 var thank=document.querySelector(".thank");
 
 $("#SentButton").click(function(){
   
-  if (CheckTextFields()==true&&CheckRadioFields()==true) thank.style.display="inline-block";
+  if (CheckTextFields()==true&&CheckRadioFields()==true) {
+    ClearInputs(true);
+    thank.style.display="inline-block";
+    setTimeout(function(){ thank.style.display="none"; }, 5000);
+    
+  }
   else{
     CheckTextFields();
     CheckRadioFields();
